@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+.branches_info_image {
+	width: 580px;
+	height: 580px;
+	flex-shrink: 0;
+	max-width: 100%;
+	border-radius: 12px;
+	background: var(--neutral-05, #D6D6D6);
+}
+.branches_info_body{
+	padding-left: 64px;
+}
+.branches_info_name {
+	color: var(--neutral-01, #000);
+	font-family: Inter;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 54px;
+}
+
+.branches_info_desc {
+	color: var(--neutral-02, #444);
+	text-align: justify;
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	margin-top: 26px;
+	margin-bottom: 32px;
+}
+
+.branches_info_address span {
+	color: var(--neutral-01, #000);
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px
+}
+
+.branches_info_address p {
+	color: var(--neutral-02, #444);
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+.branches_info_open span {
+	color: var(--neutral-01, #000);
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+.branches_info_open p {
+	color: var(--neutral-02, #444);
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+.branches_info_btn {
+	display: flex;
+	padding: 12px 0px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	align-self: stretch;
+	border-radius: 12px;
+	background: var(--neutral-06, #EFEFEF);
+	margin-top: 32px;
+}
+
+.branches_info_btn span {
+	color: var(--neutral-02, #444);
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 30px;
+}

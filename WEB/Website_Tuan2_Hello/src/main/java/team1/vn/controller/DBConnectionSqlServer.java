@@ -1,0 +1,30 @@
+package team1.vn.controller;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBConnectionSqlServer {
+	private final String serverName = "DESKTOP-3DB36V1";
+	private final String dbName = "PolyTube";
+	private final String portNumber = "1435";
+	private final String instance = "";
+	private final String userID = "sa";
+	private final String password = "12345";
+
+	public Connection getConnection() throws Exception {
+		String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + "\\" + instance + ";databaseName=" + dbName;
+		if (instance == null || instance.trim().isEmpty())
+			url = "jdbc:sqlserver://" + serverName + ":" + portNumber + ";databaseName=" + dbName;
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		return DriverManager.getConnection(url, userID, password);
+	}
+
+	public static void main(String[] args) {
+		try {
+			System.out.println(new DBConnectionSqlServer().getConnection());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

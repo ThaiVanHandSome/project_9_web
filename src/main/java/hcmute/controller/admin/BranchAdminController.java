@@ -1,5 +1,6 @@
 package hcmute.controller.admin;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +25,8 @@ import hcmute.model.BranchModel;
 import hcmute.service.IBranchService;
 @Controller
 @RequestMapping("admin")
-public class BranchAdminController {
+public class BranchAdminController implements Serializable {
+	private static final long serialVersionUID = 1L;
 	@Autowired
 	IBranchService branchService;
 	@GetMapping("customize-branch")
@@ -44,10 +46,11 @@ public class BranchAdminController {
 		model.addAttribute("branch", branch);
 		return "admin/customize/customize-branch";
 	}
+	
 	@PostMapping("customize-branch/saveOrUpdate")
 	public ModelAndView saveOrUpdate(ModelMap model, @Valid @ModelAttribute("branch") BranchModel branch, BindingResult result) {
 	    if (result.hasErrors()) {
-	        return new ModelAndView("admin/branch/customize-branch");
+	        return new ModelAndView("admin/customize/customize-branch");
 	    }
 	    BranchEntity entity = new BranchEntity();
 	    BeanUtils.copyProperties(branch, entity);
@@ -59,7 +62,7 @@ public class BranchAdminController {
 	        message = "Branch đã được thêm thành công";
 	    }
 	    model.addAttribute("message", message);
-	    return new ModelAndView("forward:/admin/customize-branch", model);
+	    return new ModelAndView("forward:/admin/customize/customize-branch", model);
 	}
 	@GetMapping("customize-branch/edit/{idBranch}")
 	public ModelAndView edit(ModelMap model, @PathVariable("idBranch") int idBranch) {

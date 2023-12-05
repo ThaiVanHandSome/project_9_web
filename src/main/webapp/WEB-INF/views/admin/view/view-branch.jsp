@@ -64,8 +64,8 @@
                                         <td>${branch.image}</td>
 <%--                                         <td>${branch.cityByBranch}</td> --%>
                                         <td>${branch.description}</td>
-                                        <td><a class="btn btn-success" href="/admin/customize-branch/edit/${item.idBranch}">edit</a></td>
-                                        <td><a class="btn btn-danger" href="/admin/customize-branch/delete/${item.idBranch}">delete</a></td>
+                                        <td><a class="btn btn-success" href="/admin/customize-branch/edit/${branch.idBranch}">edit</a></td>
+                                        <td><a class="btn btn-danger" href="/admin/customize-branch/delete/${branch.idBranch}">delete</a></td>
                                     </tr>
                                 </c:forEach>
                             </tbody>

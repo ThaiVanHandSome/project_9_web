@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import hcmute.embeddedId.OrderDetailId;
-import hcmute.entity.OrderDetailEntity;
+import hcmute.model.OrderDetailEntity;
 
 @Repository
 public interface OrderDetailRepository extends JpaRepository<OrderDetailEntity, OrderDetailId>{

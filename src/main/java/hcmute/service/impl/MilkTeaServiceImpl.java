@@ -13,7 +13,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import hcmute.entity.MilkTeaEntity;
-import hcmute.entity.OrderDetailEntity;
+import hcmute.model.OrderDetailEntity;
 import hcmute.repository.MilkTeaRepository;
 import hcmute.repository.OrderDetailRepository;
 import hcmute.service.IMilkTeaService;

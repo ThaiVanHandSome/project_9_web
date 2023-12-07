@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import hcmute.embeddedId.OrderDetailId;
-import hcmute.entity.OrderDetailEntity;
+import hcmute.model.OrderDetailEntity;
 import hcmute.repository.OrderDetailRepository;
 import hcmute.service.IOrderDetailService;
 

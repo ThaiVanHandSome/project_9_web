@@ -1,4 +1,4 @@
-package hcmute.entity;
+package hcmute.model;
 
 import java.io.Serializable;
 
@@ -11,6 +11,8 @@ import javax.persistence.Table;
 
 import hcmute.embeddedId.CartDetailId;
 import hcmute.embeddedId.OrderDetailId;
+import hcmute.entity.MilkTeaEntity;
+import hcmute.entity.OrderEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

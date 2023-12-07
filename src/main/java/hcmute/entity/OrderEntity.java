@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 import javax.persistence.*;
+
+import hcmute.model.OrderDetailEntity;
 import lombok.*;
 
 

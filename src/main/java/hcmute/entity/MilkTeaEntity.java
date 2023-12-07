@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.*;
+
+import hcmute.model.OrderDetailEntity;
 import lombok.*;
 
 @Data

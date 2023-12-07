@@ -29,11 +29,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import hcmute.embeddedId.OrderDetailId;
 import hcmute.entity.CustomerEntity;
 import hcmute.entity.MilkTeaEntity;
-import hcmute.entity.OrderDetailEntity;
 import hcmute.entity.OrderEntity;
 import hcmute.entity.PayMethodEntity;
 import hcmute.model.MilkTeaModel;
 import hcmute.model.OrderData;
+import hcmute.model.OrderDetailEntity;
 import hcmute.model.OrderModel;
 import hcmute.model.OrderProduct;
 import hcmute.model.OrderProduct.OrderItem;
@@ -101,7 +101,7 @@ public class PaymentController {
 	}
 
 	@GetMapping("/order")
-	private ModelAndView insertOrder(ModelMap model, @RequestParam("data") String data) throws UnsupportedEncodingException, JsonMappingException, JsonProcessingException
+	private String insertOrder(ModelMap model, @RequestParam("data") String data) throws UnsupportedEncodingException, JsonMappingException, JsonProcessingException
 	{
 		data = URLDecoder.decode(data, "UTF-8");
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -163,6 +163,6 @@ public class PaymentController {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("", model);
+		return "user/home";
 	}
 }

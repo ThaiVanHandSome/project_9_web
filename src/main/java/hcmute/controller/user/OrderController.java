@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import hcmute.entity.CustomerEntity;
-import hcmute.entity.OrderDetailEntity;
 import hcmute.entity.OrderEntity;
 import hcmute.entity.PayMethodEntity;
 import hcmute.entity.UserEntity;
+import hcmute.model.OrderDetailEntity;
 import hcmute.service.IOrderDetailService;
 import hcmute.service.IOrderService;
 

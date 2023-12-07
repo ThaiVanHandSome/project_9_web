@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import hcmute.embeddedId.OrderDetailId;
-import hcmute.entity.OrderDetailEntity;
+import hcmute.model.OrderDetailEntity;
 
 public interface IOrderDetailService {
 

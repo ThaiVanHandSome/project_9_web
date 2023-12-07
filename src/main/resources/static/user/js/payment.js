@@ -80,7 +80,14 @@ paymentBtn.addEventListener('click', function() {
 	orderData.orderState = 0;
 	var orderDataEncoded = encodeURIComponent(JSON.stringify(orderData));
 	var myAnchor = document.createElement('a');
-	myAnchor.setAttribute('href', '/payment/order?data=' + orderDataEncoded);
+	if(listRadio[1].checked)
+	{
+		myAnchor.setAttribute('href', '/api/payment/create_payment?cost=' + orderData.finalPrice + '&data=' + orderDataEncoded);
+	}
+	else
+	{
+		myAnchor.setAttribute('href', '/payment/order?data=' + orderDataEncoded);
+	}
 	myAnchor.click();
 })
 
